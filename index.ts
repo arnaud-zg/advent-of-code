@@ -1,4 +1,5 @@
 import yargs from "yargs";
+// @ts-ignore
 import { hideBin } from "yargs/helpers";
 import * as shelljs from "shelljs";
 
