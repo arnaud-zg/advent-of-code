@@ -1,17 +1,13 @@
 import * as fs from "fs";
-
-type Data = number[];
+import { getData } from './utils'
 
 const inputRaw = fs.readFileSync("input.txt", "utf8");
-
-const getData = ({ inputRaw }: { inputRaw: string }) =>
-  inputRaw.split("\n").map((value) => Number(value));
 
 const solvePuzzle = ({
   data,
   sumResult,
 }: {
-  data: Data;
+  data: ReturnType<typeof getData>;
   sumResult: number;
 }) => {
   for (let x of data) {
