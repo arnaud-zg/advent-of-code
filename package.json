@@ -5,13 +5,15 @@
   "author": "Arnaud Zheng <arnaud-zg@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "cli": "ts-node ."
+    "cli": "ts-node .",
+    "release": "standard-version"
   },
   "devDependencies": {
     "@types/node": "14.14.10",
     "@types/shelljs": "0.8.8",
     "@types/yargs": "15.0.11",
     "shelljs": "0.8.4",
+    "standard-version": "9.0.0",
     "ts-node": "9.1.0",
     "typescript": "4.1.2",
     "yargs": "16.1.1"
