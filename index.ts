@@ -6,7 +6,7 @@ import * as shelljs from "shelljs";
 yargs(hideBin(process.argv))
   .command<{ year: number; day: number }>(
     "solvePuzzle",
-    "Solve the puzzle",
+    "Solve the puzzle of Advent of Code",
     (yargs) => {
       yargs.option("year", {
         alias: "y",
