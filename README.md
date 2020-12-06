@@ -30,15 +30,15 @@ $ yarn --version
 
 ### Test
 
-Every tests have been run on a raspberry pi 1 model b+, the table below show some specifications of the model.
+Every tests have been run multiple devices, the table below show some specifications.
 > You don't need a computer science background to participate - just a little programming knowledge and some problem solving skills will get you pretty far. Nor do you need a fancy computer; every problem has a solution that completes in at most 15 seconds on ten-year-old hardware.
 
-|           | Raspberry Pi 1 Model B+ |
-|-----------|:-----------------------:|
-| CPU       |         BCM2835         |
-| CPU Cores |            1            |
-| CPU Speed |         700 MHz         |
-| RAM       |          512 MB         |
+|           | Raspberry Pi 1 Model B+ |         Laptop 1         |
+|-----------|:-----------------------:|:------------------------:|
+| CPU       |         BCM2835         |  Intel Core 2 Duo T6400  |
+| CPU Cores |            1            |            2             |
+| CPU Speed |         700 MHz         |           2 Ghz          |
+| RAM       |          512 MB         |           3 GB           |
 
 ### Resolve a puzzle
 
