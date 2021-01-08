@@ -42,7 +42,7 @@ Every tests have been run multiple devices, the table below show some specificat
 
 ### Resolve a puzzle
 
-Let's say you want to solve the puzzle of day 1 of 2020, you need to execute command according to following patter `yarn cli solvePuzzle -y=[year] -d=[day]`.
+Let's say you want to solve the puzzle of day 1 of 2020, you need to execute command according to following pattern `yarn cli solvePuzzle -y=[year] -d=[day]`.
 
 ```sh
 $ yarn cli solvePuzzle -y=2020 -d=1
