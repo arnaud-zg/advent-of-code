@@ -5,13 +5,11 @@ const project = resolve(process.cwd(), "tsconfig.json");
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   extends: ["eslint:recommended", "prettier", "eslint-config-turbo"],
-  plugins: ["only-warn"],
-  globals: {
-    React: true,
-    JSX: true,
-  },
+  plugins: ["only-warn", "jest"],
+  globals: {},
   env: {
     node: true,
+    "jest/globals": true
   },
   settings: {
     "import/resolver": {

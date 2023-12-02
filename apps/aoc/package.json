@@ -1,0 +1,25 @@
+{
+  "name": "@repo/aoc",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@jest/globals": "29.7.0",
+    "@next/eslint-plugin-next": "14.0.2",
+    "@repo/eslint-config": "*",
+    "@repo/parser": "*",
+    "@repo/puzzles": "*",
+    "@repo/typescript-config": "*",
+    "@types/eslint": "8.44.7",
+    "@types/jest": "29.5.10",
+    "@types/node": "17.0.12",
+    "eslint": "8.53.0",
+    "jest": "29.7.0",
+    "ts-jest": "29.1.1",
+    "typescript": "5.2.2"
+  }
+}

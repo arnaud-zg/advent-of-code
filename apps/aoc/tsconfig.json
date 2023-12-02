@@ -1,0 +1,11 @@
+{
+  "extends": "@repo/typescript-config/cli-library.json",
+  "compilerOptions": {
+    "plugins": []
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+  ],
+  "exclude": ["node_modules"]
+}
