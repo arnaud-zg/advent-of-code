@@ -6,7 +6,9 @@
     "apps/*/*",
     "packages/*"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "zod": "^4.1.13"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },

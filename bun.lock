@@ -4,6 +4,9 @@
   "workspaces": {
     "": {
       "name": "advent-of-code",
+      "dependencies": {
+        "zod": "^4.1.13",
+      },
       "devDependencies": {
         "@types/bun": "latest",
       },
@@ -19,9 +22,6 @@
     },
     "packages/utils": {
       "name": "@advent-of-code/utils",
-      "dependencies": {
-        "zod": "^4.1.13",
-      },
     },
   },
   "packages": {

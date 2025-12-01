@@ -1,3 +1,2 @@
-export const greet = () => {
-  console.log("Hello via Bun!");
-};
+export * from "./greet";
+export * from "./input";
