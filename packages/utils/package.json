@@ -1,0 +1,8 @@
+{
+  "name": "@advent-of-code/utils",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "zod": "^4.1.13"
+  }
+}

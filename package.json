@@ -1,0 +1,16 @@
+{
+  "name": "advent-of-code",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*/*",
+    "packages/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
