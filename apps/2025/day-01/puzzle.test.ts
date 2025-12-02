@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 
 import { getLinesFromInput, readInput } from "@advent-of-code/utils";
 
-import { countAllZeroHits, countEndPositionZeros } from "./password";
+import { countAllZeroHits, countEndPositionZeros } from "./puzzle";
 
 describe("2025 - Day 1", () => {
   describe("Secret Entrance", () => {

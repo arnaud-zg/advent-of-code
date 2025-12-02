@@ -1,17 +1,12 @@
 import { describe, expect, test } from "bun:test";
 
-import {
-  getItemsFromSeparator,
-  getLinesFromInput,
-  readInput,
-  sum,
-} from "@advent-of-code/utils";
+import { getItemsFromSeparator, readInput, sum } from "@advent-of-code/utils";
 
 import {
   filterInvalidProductIdsRanges,
   isRepeatedSequencePattern,
   isRepeatedSequenceTwice,
-} from "./gift-shop";
+} from "./puzzle";
 
 describe("2025 - Day 2", () => {
   describe("Gift Shop", () => {
