@@ -20,12 +20,20 @@
         "@advent-of-code/utils": "*",
       },
     },
+    "apps/2025/day-02": {
+      "name": "@advent-of-code/2025-day-02",
+      "dependencies": {
+        "@advent-of-code/utils": "workspace:*",
+      },
+    },
     "packages/utils": {
       "name": "@advent-of-code/utils",
     },
   },
   "packages": {
     "@advent-of-code/2025-day-01": ["@advent-of-code/2025-day-01@workspace:apps/2025/day-01"],
+
+    "@advent-of-code/2025-day-02": ["@advent-of-code/2025-day-02@workspace:apps/2025/day-02"],
 
     "@advent-of-code/utils": ["@advent-of-code/utils@workspace:packages/utils"],
 

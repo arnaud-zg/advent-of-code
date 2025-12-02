@@ -1,0 +1,8 @@
+{
+  "name": "@advent-of-code/2025-day-02",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "@advent-of-code/utils": "workspace:*"
+  }
+}

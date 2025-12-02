@@ -16,3 +16,13 @@ export const readInput = (
 export const getLinesFromInput = (inputContent: string) => {
   return inputContent.split("\n");
 };
+
+export const getItemsFromSeparator = (
+  inputContent: string,
+  separator: string = ","
+) => {
+  const lines = getLinesFromInput(inputContent);
+  const items = lines.flatMap((line) => line.split(separator)).filter(Boolean);
+
+  return items;
+};
