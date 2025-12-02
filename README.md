@@ -1,12 +1,20 @@
-# advent-of-code
+# 🎄 Advent of Code
 
-This project contains solutions for Advent of Code 2025 challenges.
+This project contains solutions for **Advent of Code 2025** challenges.
 
-**Performed by:** [Arnaud Zheng](https://github.com/arnaud-zg)
+**👤 Performed by:** [Arnaud Zheng](https://github.com/arnaud-zg)
+
+**Tech Stack:**
+
+![Node.js](https://img.shields.io/badge/node-24.11.1-339933?style=for-the-badge&logo=node.js)
+![Bun](https://img.shields.io/badge/runtime-Bun-FFCC33?style=for-the-badge&logo=bun)
+![TypeScript](https://img.shields.io/badge/language-TypeScript-3178C6?style=for-the-badge&logo=typescript)
+
+[![Advent of Code 2025 Progress](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Farnaud-zg%2Fadvent-of-code%2Fmaster%2F.github%2Fbadges%2F2025.json&style=for-the-badge)](/apps/2025)
 
 ## 🧩 Generating a Puzzle Day
 
-You can quickly scaffold a new Advent of Code puzzle day using the generator:
+Quickly scaffold a new Advent of Code puzzle day:
 
 ```bash
 bun run puzzle:generate
@@ -33,7 +41,7 @@ apps/<year>/day-<day>/
 - Renaming methods in puzzle.ts to something more descriptive.
 - Running tests in watch mode
 
-## Running Tests
+## 🧪 Running Tests
 
 To run unit tests for Day 1 in watch mode:
 
@@ -41,8 +49,18 @@ To run unit tests for Day 1 in watch mode:
 bun test apps/2025/day-01 --watch
 ```
 
-This will automatically rerun tests whenever you modify the source files.
+Tests will automatically rerun on file changes.
 
-## License
+## ⚡ Update Advent of Code Badge
+
+Keep your Advent of Code 2025 progress badge up-to-date:
+
+```bash
+bun run apps/badge-updater
+```
+
+This regenerates the badge data so it reflects your latest progress.
+
+## 📜 License
 
 This project is licensed under the [MIT License](./LICENSE).
