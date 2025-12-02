@@ -1,0 +1,37 @@
+import { describe, expect, test } from "bun:test";
+
+import { readInput } from "@advent-of-code/utils";
+
+import { solvePart1, solvePart2 } from "./puzzle";
+
+describe("{{year}} - Day {{day}}", () => {
+  describe("{{puzzleName}}", () => {
+    describe("Part 1", () => {
+      test("should solve the puzzle with sample", () => {
+        const inputContent = readInput({{year}}, {{day}}, "sample.txt");
+
+        expect(solvePart1(inputContent)).toBe(2);
+      });
+
+      test("should solve the puzzle with input", () => {
+        const inputContent = readInput({{year}}, {{day}});
+
+        expect(solvePart1(inputContent)).toBe(4);
+      });
+    });
+
+    describe("Part 2", () => {
+      test("should solve the puzzle with sample", () => {
+        const inputContent = readInput({{year}}, {{day}}, "sample.txt");
+
+        expect(solvePart2(inputContent)).toBe(4);
+      });
+
+      test("should solve the puzzle with input", () => {
+        const inputContent = readInput({{year}}, {{day}});
+
+        expect(solvePart2(inputContent)).toBe(8);
+      });
+    });
+  });
+});

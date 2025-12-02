@@ -1,0 +1,13 @@
+import { z } from "zod";
+
+export const solvePart1 = (inputContent: string) => {
+  const value = z.number().parse(Number(inputContent));
+
+  return value * 2;
+};
+
+export const solvePart2 = (inputContent: string) => {
+  const value = z.number().parse(Number(inputContent));
+
+  return value * 4;
+};
