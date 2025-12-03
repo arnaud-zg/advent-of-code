@@ -12,5 +12,11 @@ This folder contains all solutions for **Advent of Code 2025**.
 
 ## 🏎️ Performance
 
-| Day | Part | Test | Time (ms) | Status |
-| --- | ---- | ---- | --------- | ------ |
+| Day | Part | Test            | Time (ms) | Status |
+| --- | ---- | --------------- | --------- | ------ |
+| 1   | 1    | Secret Entrance | 🟢 1.44   | ✓      |
+| 1   | 2    | Secret Entrance | 🟢 0.53   | ✓      |
+| 2   | 1    | Gift Shop       | 🔴 123.38 | ✓      |
+| 2   | 2    | Gift Shop       | 🔴 298.56 | ✓      |
+| 3   | 1    | Lobby           | 🟢 1.06   | ✓      |
+| 3   | 2    | Lobby           | 🟢 0.63   | ✓      |
