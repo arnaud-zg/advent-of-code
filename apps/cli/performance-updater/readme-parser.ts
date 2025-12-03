@@ -1,0 +1,60 @@
+import fs from "fs";
+import path from "path";
+
+export class ReadmeParser {
+  constructor(private readonly year: string) {}
+
+  public readmePath(): string {
+    return path.join("apps", this.year, "README.md");
+  }
+
+  public readContent(): string {
+    return fs.readFileSync(this.readmePath(), "utf-8");
+  }
+
+  public getPerformanceSectionBounds(content: string): [number, number] {
+    const perfHeaderRegex = /##\s*🏎️\s*Performance/i;
+    const headerMatch = perfHeaderRegex.exec(content);
+
+    if (!headerMatch) {
+      throw new Error(
+        `README.md for year ${this.year} does not contain "## 🏎️ Performance" section`
+      );
+    }
+
+    const start = headerMatch.index;
+    const rest = content.slice(start + headerMatch[0].length);
+    const nextHeaderMatch = /##\s+/.exec(rest);
+    const end = nextHeaderMatch
+      ? start + headerMatch[0].length + nextHeaderMatch.index
+      : content.length;
+
+    return [start, end];
+  }
+
+  public parsePerformanceRows(sectionContent: string): Map<string, string> {
+    const map = new Map<string, string>();
+
+    sectionContent
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(
+        (line) =>
+          line.startsWith("|") &&
+          !/^(\|\s*-+\s*)+\|$/.test(line) &&
+          !line.includes("Day | Part")
+      )
+      .forEach((line) => {
+        const cols = line.split("|").map((c) => c.trim());
+        const key = `${cols[1]}|${cols[2]}|${cols[3]}`; // Day|Part|Test
+
+        map.set(key, line);
+      });
+
+    return map;
+  }
+
+  public writeContent(content: string): void {
+    fs.writeFileSync(this.readmePath(), content, "utf-8");
+  }
+}

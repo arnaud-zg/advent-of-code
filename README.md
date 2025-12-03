@@ -56,7 +56,7 @@ Tests will automatically rerun on file changes.
 Keep your Advent of Code 2025 progress badge up-to-date:
 
 ```bash
-bun run apps/badge-updater
+bun run apps/cli/badge-updater
 ```
 
 This regenerates the badge data so it reflects your latest progress.

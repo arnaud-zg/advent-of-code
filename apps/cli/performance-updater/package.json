@@ -1,0 +1,8 @@
+{
+  "name": "@advent-of-code/performance-updater",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "@advent-of-code/cli": "workspace:*"
+  }
+}

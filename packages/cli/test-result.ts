@@ -1,10 +1,12 @@
 #!/usr/bin/env bun
 import { FULL_SCORE, NO_SCORE, PARTIAL_SCORE } from "./config";
+import type { PerformanceResult } from "./performance-result";
 
 export class TestResult {
   constructor(
     private readonly passed: number,
-    private readonly total: number
+    private readonly total: number,
+    private readonly performanceResults: PerformanceResult[]
   ) {}
 
   hasTests(): boolean {
@@ -34,5 +36,19 @@ export class TestResult {
     if (this.allPassed()) return "✓";
     if (this.somePassed()) return "⚠";
     return "✗";
+  }
+
+  performanceForDay(
+    year: number,
+    day: number,
+    part?: number
+  ): PerformanceResult[] {
+    return this.performanceResults.filter((performance) => {
+      const matchesYear = performance.getYear() === year;
+      const matchesDay = performance.getDay() === day;
+      const matchesPart = part ? performance.getPart() === part : true;
+
+      return matchesYear && matchesDay && matchesPart;
+    });
   }
 }
