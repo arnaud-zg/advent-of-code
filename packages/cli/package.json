@@ -1,5 +1,5 @@
 {
-  "name": "@advent-of-code/badge-updater",
+  "name": "@advent-of-code/cli",
   "module": "index.ts",
   "type": "module",
   "dependencies": {}

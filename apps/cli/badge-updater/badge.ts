@@ -1,7 +1,15 @@
 import fs from "fs";
 import path from "path";
-import { badgeSchema, MAX_DAYS } from "./config";
+import { z } from "zod";
 import { ScoreColor } from "./score-color";
+import { MAX_DAYS } from "@advent-of-code/cli";
+
+export const badgeSchema = z.object({
+  schemaVersion: z.number(),
+  label: z.string(),
+  message: z.string(),
+  color: z.string(),
+});
 
 export class Badge {
   constructor(private readonly year: string) {}

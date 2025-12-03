@@ -1,7 +1,6 @@
 #!/usr/bin/env bun
 import { Badge } from "./badge";
-import { YearDirectory } from "./year-directory";
-import { YearPrompt } from "./year-prompt";
+import { YearDirectory, YearPrompt } from "@advent-of-code/cli";
 
 class BadgeUpdater {
   async run(): Promise<void> {

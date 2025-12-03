@@ -1,0 +1,8 @@
+{
+  "name": "@advent-of-code/badge-updater",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "@advent-of-code/cli": "workspace:*"
+  }
+}

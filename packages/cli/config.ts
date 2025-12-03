@@ -3,12 +3,6 @@ import { z } from "zod";
 export const yearSchema = z
   .string()
   .regex(/^\d{4}$/, "Year must be a 4-digit number");
-export const badgeSchema = z.object({
-  schemaVersion: z.number(),
-  label: z.string(),
-  message: z.string(),
-  color: z.string(),
-});
 
 export const MAX_DAYS = 25;
 export const FULL_SCORE = 1.0;
