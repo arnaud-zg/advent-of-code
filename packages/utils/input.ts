@@ -13,6 +13,15 @@ export const readInput = (
   return fs.readFileSync(filePath, "utf-8").trim();
 };
 
+export const readDigits = (line: string) => {
+  const digits = line
+    .trim()
+    .split("")
+    .map((item) => Number(item));
+
+  return digits;
+};
+
 export const getLinesFromInput = (inputContent: string) => {
   return inputContent.split("\n");
 };
