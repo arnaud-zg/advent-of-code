@@ -23,7 +23,7 @@ export class ReadmeUpdater {
 
     return `| ${result.getDay()} | ${result.getPart()} | ${result
       .getName()
-      .trim()} | ${timeEmoji} ${evaluation.getTime().toFixed(2)} | ${statusEmoji} |`;
+      .trim()} | ${timeEmoji} ${evaluation.getTime().toFixed(2)} | ${statusEmoji} | |`;
   }
 
   public async update(
@@ -59,7 +59,7 @@ export class ReadmeUpdater {
     }
 
     const tableHeader =
-      "| Day | Part | Test | Time (ms) | Status |\n| - | - | - | - | - |";
+      "| Day | Part | Test | Time (ms) | Status | O(n) |\n| - | - | - | - | - | - |";
     const updatedRows = Array.from(existingMap.values()).join("\n");
     const updatedSection = `## 🏎️ Performance\n\n${tableHeader}\n${updatedRows}\n`;
     let updatedContent = `${before}${updatedSection}${after}`;
