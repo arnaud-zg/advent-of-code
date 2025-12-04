@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "puzzle:generate": "plop"
+    "puzzle:generate": "plop",
+    "puzzle:snapshot": "bun run apps/cli/badge-updater && bun run apps/cli/performance-updater"
   },
   "workspaces": [
     "apps/*/*",
