@@ -1,13 +1,9 @@
 import { z } from "zod";
+import { validatePuzzleInput } from "@advent-of-code/utils";
 
-export const solvePart1 = (inputContent: string) => {
-  const value = z.number().parse(Number(inputContent));
+const inputSchema = z.string().min(1, "Input is required").trim();
 
-  return value * 2;
-};
-
-export const solvePart2 = (inputContent: string) => {
-  const value = z.number().parse(Number(inputContent));
-
-  return value * 4;
+export const solvePuzzle = (inputContent: string) => {
+  validatePuzzleInput(inputContent);
+  inputSchema.parse(inputContent);
 };

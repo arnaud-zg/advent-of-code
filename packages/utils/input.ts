@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { z, ZodError } from "zod";
 
 export const readInput = (
   year: number,
@@ -34,4 +35,21 @@ export const getItemsFromSeparator = (
   const items = lines.flatMap((line) => line.split(separator)).filter(Boolean);
 
   return items;
+};
+
+export const validatePuzzleInput = (inputContent: string): string => {
+  const inputSchema = z.string().min(1, `Input is required`).trim();
+
+  try {
+    return inputSchema.parse(inputContent);
+  } catch (err) {
+    if (err instanceof ZodError) {
+      console.error(
+        `❌ Input is empty. Please update it before starting the challenge.`
+      );
+      process.exit(1);
+    }
+
+    throw err;
+  }
 };

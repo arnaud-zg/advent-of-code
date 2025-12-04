@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 
 import { readInput } from "@advent-of-code/utils";
 
-import { solvePart1, solvePart2 } from "./puzzle";
+import { solvePuzzle } from "./puzzle";
 
 describe("{{year}} - Day {{day}}", () => {
   describe("{{puzzleName}}", () => {
@@ -10,27 +10,27 @@ describe("{{year}} - Day {{day}}", () => {
       test("should solve the puzzle with sample", () => {
         const inputContent = readInput({{year}}, {{day}}, "sample.txt");
 
-        expect(solvePart1(inputContent)).toBe(2);
+        expect(solvePuzzle(inputContent)).toBeUndefined();
       });
 
-      test("should solve the puzzle with input", () => {
+      test.skip("should solve the puzzle with input", () => {
         const inputContent = readInput({{year}}, {{day}});
 
-        expect(solvePart1(inputContent)).toBe(4);
+        expect(solvePuzzle(inputContent)).toBeUndefined();
       });
     });
 
-    describe("Part 2", () => {
-      test("should solve the puzzle with sample", () => {
+    describe.skip("Part 2", () => {
+      test.skip("should solve the puzzle with sample", () => {
         const inputContent = readInput({{year}}, {{day}}, "sample.txt");
 
-        expect(solvePart2(inputContent)).toBe(4);
+        expect(solvePuzzle(inputContent)).toBeUndefined();
       });
 
-      test("should solve the puzzle with input", () => {
+      test.skip("should solve the puzzle with input", () => {
         const inputContent = readInput({{year}}, {{day}});
 
-        expect(solvePart2(inputContent)).toBe(8);
+        expect(solvePuzzle(inputContent)).toBeUndefined();
       });
     });
   });
