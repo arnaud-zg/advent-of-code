@@ -12,6 +12,10 @@ This project contains solutions for **Advent of Code 2025** challenges.
 
 [![Advent of Code 2025 Progress](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Farnaud-zg%2Fadvent-of-code%2Fmaster%2F.github%2Fbadges%2F2025.json&style=for-the-badge)](/apps/2025)
 
+## 🔗 Related Links
+
+- [🎄 Advent of Code 2025](./apps/2025/README.md)
+
 ## 🧩 Generating a Puzzle Day
 
 Quickly scaffold a new Advent of Code puzzle day:
