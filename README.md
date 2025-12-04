@@ -51,15 +51,15 @@ bun test apps/2025/day-01 --watch
 
 Tests will automatically rerun on file changes.
 
-## ⚡ Update Advent of Code Badge
+## ⚡ Updating Badge & Performance Table
 
-Keep your Advent of Code 2025 progress badge up-to-date:
+Once you have completed a puzzle day, update your progress badge and performance table:
 
 ```bash
-bun run apps/cli/badge-updater
+bun run puzzle:snapshot
 ```
 
-This regenerates the badge data so it reflects your latest progress.
+This will regenerate the badge data to reflect your latest progress and performance.
 
 ## 📜 License
 
