@@ -27,3 +27,5 @@ Join my private leaderboard: [Link](https://adventofcode.com/2025/leaderboard/pr
 | 3   | 2    | Lobby               | 🟢 0.63   | ✓      | O(n) (n = total number of digits in all lines)           |
 | 4   | 1    | Printing Department | 🟢 5.72   | ✓      | O(n \* m) (n = number of rows, m = number of column)     |
 | 4   | 2    | Printing Department | 🔴 125.00 | ✓      | O((n \* m)^2) (n = number of rows, m = number of column) |
+| 5   | 1    | Cafeteria           | 🟢 0.84   | ✓      |                                                          |
+| 5   | 2    | Cafeteria           | 🟢 0.25   | ✓      |                                                          |
