@@ -17,15 +17,17 @@ Join my private leaderboard: [Link](https://adventofcode.com/2025/leaderboard/pr
 
 ## 🏎️ Performance
 
-| Day | Part | Test                | Time (ms) | Status | O(n)                                                     |
-| --- | ---- | ------------------- | --------- | ------ | -------------------------------------------------------- |
-| 1   | 1    | Secret Entrance     | 🟢 1.44   | ✓      | O(n) (n = number of lines)                               |
-| 1   | 2    | Secret Entrance     | 🟢 0.53   | ✓      | O(n) (n = number of lines)                               |
-| 2   | 1    | Gift Shop           | 🔴 123.38 | ✓      | O(n) (n = total number of product IDs in all ranges)     |
-| 2   | 2    | Gift Shop           | 🔴 298.56 | ✓      | O(n) (n = total number of product IDs in all ranges)     |
-| 3   | 1    | Lobby               | 🟢 1.06   | ✓      | O(n) (n = total number of digits in all lines)           |
-| 3   | 2    | Lobby               | 🟢 0.63   | ✓      | O(n) (n = total number of digits in all lines)           |
-| 4   | 1    | Printing Department | 🟢 5.72   | ✓      | O(n \* m) (n = number of rows, m = number of column)     |
-| 4   | 2    | Printing Department | 🔴 125.00 | ✓      | O((n \* m)^2) (n = number of rows, m = number of column) |
-| 5   | 1    | Cafeteria           | 🟢 0.84   | ✓      |                                                          |
-| 5   | 2    | Cafeteria           | 🟢 0.25   | ✓      |                                                          |
+| Day | Part | Test                | Time (ms) | Status | O(n)                                                                  |
+| --- | ---- | ------------------- | --------- | ------ | --------------------------------------------------------------------- |
+| 1   | 1    | Secret Entrance     | 🟢 1.44   | ✓      | O(n) (n = number of lines)                                            |
+| 1   | 2    | Secret Entrance     | 🟢 0.53   | ✓      | O(n) (n = number of lines)                                            |
+| 2   | 1    | Gift Shop           | 🔴 123.38 | ✓      | O(n) (n = total number of product IDs in all ranges)                  |
+| 2   | 2    | Gift Shop           | 🔴 298.56 | ✓      | O(n) (n = total number of product IDs in all ranges)                  |
+| 3   | 1    | Lobby               | 🟢 1.06   | ✓      | O(n) (n = total number of digits in all lines)                        |
+| 3   | 2    | Lobby               | 🟢 0.63   | ✓      | O(n) (n = total number of digits in all lines)                        |
+| 4   | 1    | Printing Department | 🟢 5.72   | ✓      | O(n \* m) (n = number of rows, m = number of column)                  |
+| 4   | 2    | Printing Department | 🔴 125.00 | ✓      | O((n \* m)^2) (n = number of rows, m = number of column)              |
+| 5   | 1    | Cafeteria           | 🟢 0.84   | ✓      | O(n \* m) (n = number of interval rows, m = number of ingredient IDs) |
+|     |
+| 5   | 2    | Cafeteria           | 🟢 0.25   | ✓      | O(n \* m) (n = number of interval rows, m = number of ingredient IDs) |
+|     |
