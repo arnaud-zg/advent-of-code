@@ -1,8 +1,6 @@
 import { z } from "zod";
 import { validatePuzzleInput } from "@advent-of-code/utils";
 
-const inputSchema = z.string().min(1, "Input is required").trim();
-
 export const solvePuzzle = (inputContent: string) => {
   validatePuzzleInput(inputContent);
 };
