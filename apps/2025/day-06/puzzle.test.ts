@@ -4,8 +4,9 @@ import { readInput, sum } from "@advent-of-code/utils";
 
 import {
   getMathWorksheetSolutions,
-  extractFrom2DLeftToRight,
-  extractFrom2DRightToLeft,
+  computeMathWorksheet,
+  computeMathWorksheetRightToLeftInColumn,
+  getMathWorksheetSolutionsRightToLeft,
 } from "./puzzle";
 
 describe("2025 - Day 6", () => {
@@ -15,7 +16,7 @@ describe("2025 - Day 6", () => {
         const inputContent = readInput(2025, 6, "sample.txt");
 
         expect(
-          sum(getMathWorksheetSolutions(inputContent, extractFrom2DLeftToRight))
+          sum(getMathWorksheetSolutions(inputContent, computeMathWorksheet))
         ).toBe(4277556);
       });
 
@@ -23,7 +24,7 @@ describe("2025 - Day 6", () => {
         const inputContent = readInput(2025, 6);
 
         expect(
-          sum(getMathWorksheetSolutions(inputContent, extractFrom2DLeftToRight))
+          sum(getMathWorksheetSolutions(inputContent, computeMathWorksheet))
         ).toBe(6378679666679);
       });
     });
@@ -32,17 +33,17 @@ describe("2025 - Day 6", () => {
       test("should solve the puzzle with sample", () => {
         const inputContent = readInput(2025, 6, "sample.txt");
 
-        expect(
-          sum(getMathWorksheetSolutions(inputContent, extractFrom2DRightToLeft))
-        ).toBe(3263827);
+        expect(sum(getMathWorksheetSolutionsRightToLeft(inputContent))).toBe(
+          3263827
+        );
       });
 
-      test.skip("should solve the puzzle with input", () => {
+      test("should solve the puzzle with input", () => {
         const inputContent = readInput(2025, 6);
 
-        expect(
-          getMathWorksheetSolutions(inputContent, extractFrom2DRightToLeft)
-        ).toBeUndefined();
+        expect(sum(getMathWorksheetSolutionsRightToLeft(inputContent))).toBe(
+          11494432585168
+        );
       });
     });
   });

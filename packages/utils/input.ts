@@ -33,7 +33,7 @@ export const readCharacter = (line: string, separator: string = "") => {
 };
 
 export const getLinesFromInput = (inputContent: string) => {
-  return inputContent.split("\n").map((line) => line.trim());
+  return inputContent.split("\n");
 };
 
 export const normalizeSpaces = (value: string) => {
