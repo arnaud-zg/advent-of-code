@@ -13,7 +13,7 @@ describe("2025 - Day 2", () => {
     describe("Part 1", () => {
       test("should solve the puzzle with sample", () => {
         const inputContent = readInput(2025, 2, "sample.txt");
-        const idsRanges = getItemsFromSeparator(inputContent);
+        const idsRanges = getItemsFromSeparator(inputContent).flat();
 
         expect(
           sum(filterInvalidProductIdsRanges(idsRanges, isRepeatedSequenceTwice))
@@ -22,7 +22,7 @@ describe("2025 - Day 2", () => {
 
       test("should solve the puzzle with input", () => {
         const inputContent = readInput(2025, 2);
-        const idsRanges = getItemsFromSeparator(inputContent);
+        const idsRanges = getItemsFromSeparator(inputContent).flat();
 
         expect(
           sum(filterInvalidProductIdsRanges(idsRanges, isRepeatedSequenceTwice))
@@ -33,7 +33,7 @@ describe("2025 - Day 2", () => {
     describe("Part 2", () => {
       test("should solve the puzzle with sample", () => {
         const inputContent = readInput(2025, 2, "sample.txt");
-        const idsRanges = getItemsFromSeparator(inputContent);
+        const idsRanges = getItemsFromSeparator(inputContent).flat();
 
         expect(
           sum(
@@ -44,7 +44,7 @@ describe("2025 - Day 2", () => {
 
       test("should solve the puzzle with input", () => {
         const inputContent = readInput(2025, 2);
-        const idsRanges = getItemsFromSeparator(inputContent);
+        const idsRanges = getItemsFromSeparator(inputContent).flat();
 
         expect(
           sum(

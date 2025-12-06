@@ -14,17 +14,30 @@ export const readInput = (
   return fs.readFileSync(filePath, "utf-8").trim();
 };
 
-export const readDigits = (line: string) => {
+export const readDigits = (line: string, separator: string = "") => {
   const digits = line
     .trim()
-    .split("")
+    .split(separator)
+    .map((item) => Number(item));
+
+  return digits;
+};
+
+export const readCharacter = (line: string, separator: string = "") => {
+  const digits = line
+    .trim()
+    .split(separator)
     .map((item) => Number(item));
 
   return digits;
 };
 
 export const getLinesFromInput = (inputContent: string) => {
-  return inputContent.split("\n");
+  return inputContent.split("\n").map((line) => line.trim());
+};
+
+export const normalizeSpaces = (value: string) => {
+  return value.trim().replace(/\s+/g, " ");
 };
 
 export const getItemsFromSeparator = (
@@ -32,7 +45,7 @@ export const getItemsFromSeparator = (
   separator: string = ","
 ) => {
   const lines = getLinesFromInput(inputContent);
-  const items = lines.flatMap((line) => line.split(separator)).filter(Boolean);
+  const items = lines.map((line) => line.split(separator).filter(Boolean));
 
   return items;
 };

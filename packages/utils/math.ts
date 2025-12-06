@@ -1,3 +1,6 @@
+export const multiply = (values: number[]) =>
+  values.reduce((acc, value) => acc * value, 1);
+
 export const sum = (values: number[]) =>
   values.reduce((acc, value) => acc + value, 0);
 

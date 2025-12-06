@@ -30,4 +30,4 @@ Join my private leaderboard: [Link](https://adventofcode.com/2025/leaderboard/pr
 | 5   | 1    | Cafeteria           | 🟢 0.84   | ✓      | O(n \* m) (n = number of interval rows, m = number of ingredient IDs) |
 |     |
 | 5   | 2    | Cafeteria           | 🟢 0.25   | ✓      | O(n \* m) (n = number of interval rows, m = number of ingredient IDs) |
-|     |
+| 6   | 1    | Trash Compactor     | 🟢 1.93   | ⚠      |                                                                       |
