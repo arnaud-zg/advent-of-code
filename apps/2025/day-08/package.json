@@ -1,0 +1,7 @@
+{
+  "name": "@advent-of-code/2025-day-08",
+  "type": "module",
+  "dependencies": {
+    "@advent-of-code/utils": "workspace:*"
+  }
+}
