@@ -22,15 +22,19 @@ export class TestOutputParser {
   extractPerformanceResults(): PerformanceResult[] {
     const results: PerformanceResult[] = [];
 
-    // Match lines like:
-    // (pass) 2025 - Day 3 > Lobby > Part 1 > should solve the puzzle with input [1.83ms]
+    // Matches lines like:
+    // (pass) 2025 - Day 8 > Playground > Part 1 > should solve the puzzle with input [0.09ms]
+    // (fail) 2025 - Day 8 > Playground > Part 1 > should solve the puzzle with sample [0.42ms]
+    // (skip) 2025 - Day 8 > Playground > Part 2 > should solve the puzzle with input
     const regex =
-      /(?:✓|\(pass\))\s+(\d+)\s*-\s*Day\s*(\d+)\s*>\s*([^>]+)\s*>\s*(Part\s*\d+)\s*>\s*(.+?)\s*\[([\d.]+)ms\]/g;
+      /^\((pass|fail|skip)\)\s+(\d+)\s*-\s*Day\s*(\d+)\s*>\s*([^>]+)\s*>\s*(Part\s*\d+)\s*>\s*(.+?)(?:\s*\[([\d.]+)ms\])?$/gm;
 
     let match: RegExpExecArray | null;
 
     while ((match = regex.exec(this.output))) {
-      const [, year, day, testName, part, description = "", time] = match;
+      const [, status, year, day, testName, part, description = "", time] =
+        match;
+
       if (
         !year ||
         !day ||
@@ -48,7 +52,7 @@ export class TestOutputParser {
           Number(day),
           Number(part.replace(/\D/g, "")),
           testName.trim(),
-          parseFloat(time)
+          status === "pass" ? parseFloat(time) : null
         )
       );
     }

@@ -20,10 +20,11 @@ export class ReadmeUpdater {
           .length
     );
     const statusEmoji = testResult?.statusIcon() ?? "";
+    const evaluationTime = evaluation.getTime()?.toFixed(2) ?? "";
 
     return `| ${result.getDay()} | ${result.getPart()} | ${result
       .getName()
-      .trim()} | ${timeEmoji} ${evaluation.getTime().toFixed(2)} | ${statusEmoji} | |`;
+      .trim()} | ${timeEmoji} ${evaluationTime} | ${statusEmoji} | |`;
   }
 
   public async update(

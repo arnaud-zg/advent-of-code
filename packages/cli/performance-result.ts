@@ -4,7 +4,7 @@ export class PerformanceResult {
     private readonly day: number,
     private readonly part: number,
     private readonly name: string,
-    private readonly timeMs: number
+    private readonly timeMs: number | null
   ) {}
 
   getYear(): number {
@@ -23,7 +23,7 @@ export class PerformanceResult {
     return this.name;
   }
 
-  getTime(): number {
+  getTime(): number | null {
     return this.timeMs;
   }
 

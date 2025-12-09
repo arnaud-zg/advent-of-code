@@ -13,7 +13,7 @@ describe("2025 - Day 8", () => {
         expect(solvePuzzle(inputContent)).toBe(40);
       });
 
-      test.skip("should solve the puzzle with input", () => {
+      test("should solve the puzzle with input", () => {
         const inputContent = readInput(2025, 8);
 
         expect(solvePuzzle(inputContent)).toBeUndefined();
