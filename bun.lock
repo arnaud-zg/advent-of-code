@@ -64,6 +64,12 @@
         "@advent-of-code/utils": "workspace:*",
       },
     },
+    "apps/2025/day-09": {
+      "name": "@advent-of-code/2025-day-09",
+      "dependencies": {
+        "@advent-of-code/utils": "workspace:*",
+      },
+    },
     "apps/cli/badge-updater": {
       "name": "@advent-of-code/badge-updater",
       "dependencies": {
@@ -99,6 +105,8 @@
     "@advent-of-code/2025-day-07": ["@advent-of-code/2025-day-07@workspace:apps/2025/day-07"],
 
     "@advent-of-code/2025-day-08": ["@advent-of-code/2025-day-08@workspace:apps/2025/day-08"],
+
+    "@advent-of-code/2025-day-09": ["@advent-of-code/2025-day-09@workspace:apps/2025/day-09"],
 
     "@advent-of-code/badge-updater": ["@advent-of-code/badge-updater@workspace:apps/cli/badge-updater"],
 
