@@ -8,6 +8,7 @@ const daySchema = z
   .int()
   .min(1, "Day must be ≥ 1")
   .max(31, "Day must be ≤ 31");
+const inputSchema = z.string().min(1, "Input content is required").trim();
 
 export default function (plop) {
   plop.setHelper("pad2", (day) => String(day).padStart(2, "0"));
@@ -55,6 +56,40 @@ export default function (plop) {
           }
 
           return result.error.issues[0]?.message || "Invalid puzzle name";
+        },
+      },
+      {
+        type: "editor",
+        name: "sampleContent",
+        message: "Enter the SAMPLE input content:",
+        validate: (input) => {
+          const result = inputSchema.safeParse(input);
+
+          if (!result.success) {
+            return (
+              result.error.issues[0]?.message ||
+              "Sample content cannot be empty"
+            );
+          }
+
+          return true;
+        },
+      },
+      {
+        type: "editor",
+        name: "inputContent",
+        message: "Enter the REAL input content:",
+        validate: (input) => {
+          const result = inputSchema.safeParse(input);
+
+          if (!result.success) {
+            return (
+              result.error.issues[0]?.message ||
+              "Real input content cannot be empty"
+            );
+          }
+
+          return true;
         },
       },
     ],
