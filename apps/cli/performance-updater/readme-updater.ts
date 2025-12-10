@@ -22,9 +22,9 @@ export class ReadmeUpdater {
     const statusEmoji = testResult?.statusIcon() ?? "";
     const evaluationTime = evaluation.getTime()?.toFixed(2) ?? "";
 
-    return `| ${result.getDay()} | ${result.getPart()} | ${result
+    return `| ${result.getDay()} | ${result.getPart()} | [${result
       .getName()
-      .trim()} | ${timeEmoji} ${evaluationTime} | ${statusEmoji} | |`;
+      .trim()}](./day-${result.getDay().toString().padStart(2, "0")}) | ${timeEmoji} ${evaluationTime} | ${statusEmoji} | |`;
   }
 
   public async update(
