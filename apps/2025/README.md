@@ -34,4 +34,6 @@ Join my private leaderboard: [Link](https://adventofcode.com/2025/leaderboard/pr
 | 7   | 1    | Laboratories        | 🟢 0.62   | ✓      | O(n \* m)<br/>n = number of rows in input<br/>m = number of columns in input |
 | 7   | 2    | Laboratories        | 🟢 0.66   | ✓      | O(n \* m)<br/>n = number of rows in input<br/>m = number of columns in input |
 | 8   | 1    | Playground          | ⌛        | ✗      |                                                                              |
+| 8   | 2    | Playground          | ⌛        | ✗      |                                                                              |
 | 9   | 1    | Movie Theater       | 🟢 4.00   | ⚠      |                                                                              |
+| 9   | 2    | Movie Theater       | ⌛        | ⚠      |                                                                              |

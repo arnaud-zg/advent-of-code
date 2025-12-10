@@ -40,7 +40,6 @@ export class TestOutputParser {
         !day ||
         !testName ||
         !part ||
-        !time ||
         !description.includes("input") // Skip lines that are for "sample"
       ) {
         continue;
@@ -52,7 +51,7 @@ export class TestOutputParser {
           Number(day),
           Number(part.replace(/\D/g, "")),
           testName.trim(),
-          status === "pass" ? parseFloat(time) : null
+          status === "pass" && time ? parseFloat(time) : null
         )
       );
     }
