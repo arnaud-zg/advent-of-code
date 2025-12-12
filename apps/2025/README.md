@@ -39,3 +39,7 @@ Join my private leaderboard: [Link](https://adventofcode.com/2025/leaderboard/pr
 | 9   | 2    | [Movie Theater](./day-09)       | ⌛        | ⚠      |                                                                              |
 | 10  | 1    | [Factory](./day-10)             | ⌛        | ✗      |                                                                              |
 | 10  | 2    | [Factory](./day-10)             | ⌛        | ✗      |                                                                              |
+| 11  | 1    | [Reactor](./day-11)             | ⌛        | ✗      |                                                                              |
+| 11  | 2    | [Reactor](./day-11)             | ⌛        | ✗      |                                                                              |
+| 12  | 1    | [Christmas Tree Farm](./day-12) | ⌛        | ✗      |                                                                              |
+| 12  | 2    | [Christmas Tree Farm](./day-12) | ⌛        | ✗      |                                                                              |

@@ -35,7 +35,7 @@ export class ReadmeParser {
   public parsePerformanceRows(sectionContent: string): Map<string, string> {
     const map = new Map<string, string>();
 
-    sectionContent
+    const lines = sectionContent
       .split("\n")
       .map((line) => line.trim())
       .filter(
@@ -43,13 +43,18 @@ export class ReadmeParser {
           line.startsWith("|") &&
           !/^(\|\s*-+\s*)+\|$/.test(line) &&
           !line.includes("Day | Part")
-      )
-      .forEach((line) => {
-        const cols = line.split("|").map((c) => c.trim());
-        const key = `${cols[1]}|${cols[2]}|${cols[3]}`; // Day|Part|Test
+      );
 
-        map.set(key, line);
-      });
+    for (const line of lines) {
+      const cols =
+        line.match(/\|([^|]*)/g)?.map((m) => m.slice(1).trim()) ?? [];
+      const [day, part, test] = cols;
+
+      if (!day || !part || !test) continue;
+
+      const key = `${day}|${part}|${test}`;
+      map.set(key, line);
+    }
 
     return map;
   }

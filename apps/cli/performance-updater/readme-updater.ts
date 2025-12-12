@@ -42,9 +42,11 @@ export class ReadmeUpdater {
     let newRowsCount = 0;
 
     for (const result of performanceResults) {
-      const key = `${result.getDay()}|${result.getPart()}|${result
-        .getName()
-        .trim()}`;
+      const previewRow = this.buildTableRow(result, testResults);
+      const cols =
+        previewRow.match(/\|([^|]*)/g)?.map((m) => m.slice(1).trim()) ?? [];
+      const [day, part, test] = cols;
+      const key = `${day}|${part}|${test}`;
 
       if (!existingMap.has(key)) {
         const row = this.buildTableRow(result, testResults);
