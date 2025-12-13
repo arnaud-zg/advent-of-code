@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 
 import { readInput } from "@advent-of-code/utils";
 
-import { solvePuzzle } from "./puzzle";
+import { getDifferentPaths } from "./puzzle";
 
 describe("2025 - Day 11", () => {
   describe("Reactor", () => {
@@ -10,27 +10,31 @@ describe("2025 - Day 11", () => {
       test("should solve the puzzle with sample", () => {
         const inputContent = readInput(2025, 11, "sample.txt");
 
-        expect(solvePuzzle(inputContent)).toBe(5);
+        expect(getDifferentPaths(inputContent, "you", "out")).toBe(5);
       });
 
-      test.skip("should solve the puzzle with input", () => {
+      test("should solve the puzzle with input", () => {
         const inputContent = readInput(2025, 11);
 
-        expect(solvePuzzle(inputContent)).toBeUndefined();
+        expect(getDifferentPaths(inputContent, "you", "out")).toBe(652);
       });
     });
 
-    describe.skip("Part 2", () => {
-      test.skip("should solve the puzzle with sample", () => {
-        const inputContent = readInput(2025, 11, "sample.txt");
+    describe("Part 2", () => {
+      test("should solve the puzzle with sample", () => {
+        const inputContent = readInput(2025, 11, "sample-2.txt");
 
-        expect(solvePuzzle(inputContent)).toBeUndefined();
+        expect(
+          getDifferentPaths(inputContent, "svr", "out", ["dac", "fft"])
+        ).toBe(2);
       });
 
-      test.skip("should solve the puzzle with input", () => {
+      test("should solve the puzzle with input", () => {
         const inputContent = readInput(2025, 11);
 
-        expect(solvePuzzle(inputContent)).toBeUndefined();
+        expect(
+          getDifferentPaths(inputContent, "svr", "out", ["dac", "fft"])
+        ).toBe(362956369749210);
       });
     });
   });
