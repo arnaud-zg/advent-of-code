@@ -33,8 +33,8 @@ Join my private leaderboard: [Link](https://adventofcode.com/2025/leaderboard/pr
 | 6   | 2    | [Trash Compactor](./day-06)     | 🟢 0.53   | ✓      | O(n \* m)<br/>n = number of rows in input<br/>m = number of columns in input |
 | 7   | 1    | [Laboratories](./day-07)        | 🟢 0.62   | ✓      | O(n \* m)<br/>n = number of rows in input<br/>m = number of columns in input |
 | 7   | 2    | [Laboratories](./day-07)        | 🟢 0.66   | ✓      | O(n \* m)<br/>n = number of rows in input<br/>m = number of columns in input |
-| 8   | 1    | [Playground](./day-08)          | ⌛        | ✗      |                                                                              |
-| 8   | 2    | [Playground](./day-08)          | ⌛        | ✗      |                                                                              |
+| 8   | 1    | [Playground](./day-08)          | 🔴 100.19 | ✓      |                                                                              |
+| 8   | 2    | [Playground](./day-08)          | 🔴 127.87 | ✓      |                                                                              |
 | 9   | 1    | [Movie Theater](./day-09)       | 🟢 4.00   | ⚠      |                                                                              |
 | 9   | 2    | [Movie Theater](./day-09)       | ⌛        | ⚠      |                                                                              |
 | 10  | 1    | [Factory](./day-10)             | ⌛        | ✗      |                                                                              |
