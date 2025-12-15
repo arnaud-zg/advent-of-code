@@ -2,8 +2,8 @@ import { getLinesFromInput, validatePuzzleInput } from "@advent-of-code/utils";
 import { z } from "zod";
 
 const COORDINATE_SEPARATOR = ",";
-const RED_TYLE_VALUE = "#";
-const EMPTY_TYLE_VALUE = ".";
+const RED_TILE_VALUE = "#";
+const EMPTY_TILE_VALUE = ".";
 
 const CoordinateParse = z
   .string()
